@@ -24,9 +24,11 @@ Summarize the problem you addressed, the analytical approach, and the value deli
 ### Project 3: Project Title
 Describe the project scope, methodologies used, and the impact of your findings.
 
+
 ## Resume
 
-Download my resume
+[📄 **Download my resume (PDF)**](https://github.com/chancefry21/chance-portfolio-site/raw/main/Chance-Jarret%20Fry_Master_Copy.pdf)
+
 
 ## Contact
 
