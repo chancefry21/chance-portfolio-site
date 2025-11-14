@@ -1,8 +1,3 @@
-diff --git a/README.md b/README.md
-index 5201921eb029a6f7531949d95d197dd12c97f06a..7df2004039d38283745f68797e451978c37fdad8 100644
---- a/README.md
-+++ b/README.md
-@@ -1,2 +1,37 @@
 -# chance-portfolio-site
 -A portfolio showcasing my data analytics projects and skills.
 +# Data Analyst Portfolio
