@@ -4,149 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chance Fry – Data Analyst Portfolio</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #222222;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
             line-height: 1.6;
         }
 
-        header {
-            background-color: #f5f5f5;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #dddddd;
+        /* NAVBAR */
+        nav {
+            background: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+            padding: 12px 25px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
             font-weight: bold;
         }
 
-        header p {
-            max-width: 700px;
-            margin: 10px auto 0;
-            font-size: 18px;
+        nav a:hover {
+            color: #0056d6;
         }
 
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* CONTAINER */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
+        /* SECTION HEADERS */
         h2 {
-            margin-top: 40px;
-            font-size: 26px;
-            border-left: 4px solid #333333;
-            padding-left: 10px;
+            font-size: 28px;
+            border-left: 4px solid #333;
+            padding-left: 12px;
+            margin-top: 60px;
         }
 
         h3 {
             font-size: 20px;
+        }
+
+        /* PROJECT GRID */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
             margin-top: 25px;
         }
 
-        a {
-            color: #0056d6;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        .project {
+        .project-card {
             background: #fafafa;
-            border: 1px solid #e5e5e5;
+            border: 1px solid #e0e0e0;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: 0.25s ease;
         }
 
-        .resume {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #e5e5e5;
-            background-color: #fafafa;
-            border-radius: 8px;
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #ccc;
         }
 
+        .project-card a {
+            color: #0056d6;
+        }
+
+        /* RESUME BOX */
+        .resume-box {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 350px;
+        }
+
+        /* FOOTER */
         footer {
+            margin-top: 60px;
+            padding: 30px;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            font-size: 14px;
-            color: #666666;
+            background: #f9f9f9;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        footer a {
+            color: #0056d6;
         }
     </style>
 </head>
+
 <body>
 
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HEADER -->
     <header>
-        <h1>Data Analyst Portfolio</h1>
-        <p>Welcome to my data analyst portfolio! This repository highlights my analytical skills, technical abilities, and selected projects that demonstrate my approach to solving data-driven problems.</p>
+        <h1>Chance Fry – Data Analyst Portfolio</h1>
+        <p>Welcome to my data analyst portfolio. Here you'll find my projects, skills, and work showcasing how I approach data-driven problem solving.</p>
     </header>
 
     <div class="container">
 
-        <h2>About Me</h2>
+        <!-- ABOUT -->
+        <h2 id="about">About Me</h2>
         <p>I recently graduated from Stonehill College with a B.S. in Business Administration, majoring in Marketing with a minor in Data Analytics. Throughout my academic experience and ongoing self-study, I developed a strong interest in data-driven decision-making and using analytics to understand patterns, optimize performance, and support strategic outcomes.</p>
 
-        <p>I am actively strengthening my technical foundation in SQL, Python, Excel, and visualization tools while building real-world projects to showcase my skills. My goal is to grow into an analytical role where I can contribute meaningful insights, work with complex datasets, and continue improving as a data professional.</p>
+        <p>I am actively strengthening my technical foundation in SQL, Python, Excel, and visualization tools while building meaningful real-world projects. My goal is to grow into an analytical role where I can contribute insights, solve business problems, and work with complex datasets.</p>
 
-        <h2>Skills</h2>
+        <!-- SKILLS -->
+        <h2 id="skills">Skills</h2>
         <ul>
-            <li><strong>SQL</strong> – Proficient in analytical queries, joins, aggregations, and business-style SQL problem solving.</li>
-            <li><strong>Python (Pandas)</strong> – Skilled in cleaning, transforming, exploring, and merging datasets.</li>
-            <li><strong>Excel</strong> – Pivot tables, charts, dashboard building, data cleaning, and advanced functions.</li>
-            <li><strong>Tableau / Power BI</strong> – Interactive dashboards, calculated fields, and storytelling with data.</li>
-            <li><strong>Data Cleaning & Preparation</strong> – Handling missing data, inconsistencies, formatting, and transformation.</li>
-            <li><strong>Data Visualization</strong> – Clear visual summaries, trend analysis, and chart creation.</li>
-            <li><strong>Analytical Thinking</strong> – Pattern identification, logical problem-solving, and insight generation.</li>
-            <li><strong>Communication</strong> – Ability to break down technical concepts clearly for any audience.</li>
+            <li><strong>SQL</strong> – Joins, aggregations, analytical queries, multi-table problems</li>
+            <li><strong>Python (Pandas)</strong> – Data cleaning, merging, analysis, exploration</li>
+            <li><strong>Excel</strong> – Pivot tables, formulas, dashboards, data cleaning</li>
+            <li><strong>Tableau / Power BI</strong> – Interactive dashboards & data storytelling</li>
+            <li><strong>Data Cleaning</strong> – Missing values, formatting, transformations</li>
+            <li><strong>Visualization</strong> – Clear charts to explain trends and insights</li>
+            <li><strong>Analytical Thinking</strong> – Pattern recognition & logical analysis</li>
+            <li><strong>Communication</strong> – Breaking down insights clearly for stakeholders</li>
         </ul>
 
-        <h2>Projects</h2>
+        <!-- PROJECTS -->
+        <h2 id="projects">Projects</h2>
 
-        <div class="project">
-            <h3>March Madness Predictive Modeling</h3>
-            <p><strong>Tools:</strong> Python, Pandas, Scikit-Learn, Matplotlib</p>
-            <p><strong>Skills Demonstrated:</strong> Data cleaning, merging multiple datasets, feature engineering, model building, evaluation, sports analytics</p>
+        <div class="project-grid">
 
-            <p>Built a logistic regression model to predict NCAA March Madness matchups using team strength indicators from multiple datasets. After merging FiveThirtyEight ratings, historical matchups, and HeatCheck analytics, I engineered features such as power rating difference, seed difference, and pool value difference to help explain game outcomes.</p>
+            <!-- PROJECT CARD -->
+            <div class="project-card">
+                <h3>March Madness Predictive Modeling</h3>
+                <p>Built a logistic regression model to predict NCAA tournament outcomes using FiveThirtyEight ratings, historical matchups, and HeatCheck data.</p>
+                <ul>
+                    <li>72% training accuracy</li>
+                    <li>63% testing accuracy</li>
+                    <li>Feature engineering: rating diff, seed diff, pool value diff</li>
+                </ul>
+                <a href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions" target="_blank">View Project</a>
+            </div>
 
-            <p><strong>Key Results:</strong></p>
-            <ul>
-                <li>Training Accuracy: 72%</li>
-                <li>Testing Accuracy: 63%</li>
-                <li>Power rating difference showed a strong relationship with actual score results</li>
-                <li>Model identified real matchup patterns despite the unpredictability of March Madness</li>
-            </ul>
+            <!-- FUTURE PROJECT CARDS CAN GO HERE -->
+            <div class="project-card">
+                <h3>Coming Soon</h3>
+                <p>Additional projects will be added shortly.</p>
+            </div>
 
-            <p><a href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions" target="_blank">View Project</a></p>
+            <div class="project-card">
+                <h3>Coming Soon</h3>
+                <p>More analytics work will be posted here.</p>
+            </div>
         </div>
 
-        <div class="resume">
-            <h3>Resume</h3>
-            <p><a href="resume.pdf" target="_blank">Download My Resume</a></p>
+        <!-- RESUME -->
+        <h2 id="resume">Resume</h2>
+        <div class="resume-box">
+            <a href="resume.pdf" target="_blank">Download My Resume (PDF)</a>
         </div>
 
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a></p>
+        <!-- CONTACT -->
+        <h2 id="contact">Contact</h2>
+        <p>Email: <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a></p>
 
     </div>
 
     <footer>
-        © 2025 Chance Fry — All Rights Reserved
+        © 2025 Chance Fry — All Rights Reserved  
     </footer>
 
 </body>
