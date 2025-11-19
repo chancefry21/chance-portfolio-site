@@ -102,7 +102,8 @@ Even with a small feature set, the model picked up real patterns in tournament m
 1. Clone the repo:
 
 ```
-git clone <your-repo-link>
+git clone https://github.com/chancefry21/chance-portfolio-site
+
 ```
 
 2. Install dependencies:
