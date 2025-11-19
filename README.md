@@ -64,7 +64,7 @@ Overview of the project scope, methodology, and impact of your findings.
 
 ## Resume
 
-[📄 **Download my resume (PDF)**](https://github.com/chancefry21/chance-portfolio-site/raw/main/Chance-Jarret%20Fry_Master_Copy.pdf)
+[Download My Resume](resume.pdf)
 
 ---
 
