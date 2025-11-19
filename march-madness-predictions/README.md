@@ -130,7 +130,3 @@ Some logical next steps:
 * Try tree-based models
 * Predict round-by-round or build bracket simulations
 * Test additional features like team pace, efficiency, or historical trends
-
----
-
-If you want, I can also revise your repo description, add a file structure section, or help you create a clean cover image for the project.
