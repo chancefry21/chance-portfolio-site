@@ -34,8 +34,25 @@ I am actively strengthening my technical foundation in SQL, Python, Excel, and v
 
 ## Projects
 
-### **Project 1: (To Be Added)**
-A concise description of the problem, your approach, tools used, and key insights.
+
+### **Project 1: March Madness Predictive Modeling**
+
+**Tools:** Python, Pandas, Scikit-Learn, Matplotlib
+**Skills Demonstrated:** data cleaning, merging multiple datasets, feature engineering, model building, evaluation, sports analytics
+
+Built a logistic regression model to predict NCAA March Madness matchups using team strength indicators from multiple datasets.
+After merging FiveThirtyEight ratings, historical matchups, and HeatCheck tournament analytics, I engineered features like power rating difference, seed difference, and pool value difference to explain game outcomes.
+
+**Key Results:**
+
+* Training Accuracy: 72%
+* Testing Accuracy: 63%
+* Power rating difference showed a clear positive relationship with actual score results
+* Model identified real matchup patterns despite the unpredictability of the tournament
+
+**View Project:**
+[march-madness-predictions](https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions)
+
 
 ### **Project 2: (To Be Added)**
 Summary of the analytical question, data preparation, and final insights.
