@@ -1,211 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chance Fry – Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chance Fry – Data Analyst Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
-            line-height: 1.6;
-        }
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f5f7fb;
+      --card-bg: #ffffff;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
 
-        /* NAVBAR */
-        nav {
-            background: #f9f9f9;
-            border-bottom: 1px solid #ddd;
-            padding: 12px 25px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    body.dark {
+      --bg: #020617;
+      --bg-alt: #020617;
+      --card-bg: #0b1220;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-soft: #1e293b;
+      --border: #1f2937;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
 
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        nav a:hover {
-            color: #0056d6;
-        }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #eff6ff 0, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        /* HEADER */
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: #fafafa;
-            border-bottom: 1px solid #eee;
-        }
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(248, 250, 252, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
 
-        header h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+    body.dark nav {
+      background: rgba(15, 23, 42, 0.9);
+    }
 
-        header p {
-            max-width: 750px;
-            margin: 0 auto;
-            font-size: 18px;
-            color: #444;
-        }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-        /* CONTAINER */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-        /* SECTION HEADERS */
-        h2 {
-            font-size: 28px;
-            border-left: 4px solid #333;
-            padding-left: 12px;
-            margin-top: 60px;
-        }
+    .nav-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+    }
 
-        h3 {
-            font-size: 20px;
-        }
+    .nav-name {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
 
-        /* PROJECT GRID */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
 
-        .project-card {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.25s ease;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #ccc;
-        }
+    .nav-links a:hover {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
 
-        .project-card a {
-            color: #0056d6;
-        }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-        /* RESUME BOX */
-        .resume-box {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 350px;
-        }
+    .btn-toggle {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      padding: 0.25rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+    }
 
-        /* FOOTER */
-        footer {
-            margin-top: 60px;
-            padding: 30px;
-            text-align: center;
-            background: #f9f9f9;
-            color: #666;
-            border-top: 1px solid #ddd;
-        }
+    .btn-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
-        footer a {
-            color: #0056d6;
-        }
-    </style>
+    /* LAYOUT */
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 540px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-buttons {
+      margin-top: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 1.2rem 1.3rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .metric {
+      background: var(--bg-alt);
+      padding: 0.55rem 0.7rem;
+      border-radius: 10px;
+      font-size: 0.75rem;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      margin-top: 0.15rem;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-top: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    /* ABOUT */
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .skill-pill {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      padding: 0.5rem 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .skill-pill strong {
+      font-weight: 600;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
+      border-color: var(--accent);
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #e5e7eb;
+    }
+
+    .project-body {
+      padding: 1rem 1.1rem 1.1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .project-list {
+      font-size: 0.85rem;
+      padding-left: 1.1rem;
+      margin: 0.4rem 0;
+    }
+
+    .project-footer {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .btn-small {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.9rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* RESUME */
+    .resume-card {
+      max-width: 360px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .resume-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* CONTACT */
+    .contact-line {
+      font-size: 0.95rem;
+    }
+
+    .contact-line a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
-
 <body>
-
-    <!-- NAVIGATION -->
-    <nav>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo">C</div>
+        <div class="nav-name">Chance Fry</div>
+      </div>
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- HEADER -->
-    <header>
-        <h1>Chance Fry – Data Analyst Portfolio</h1>
-        <p>Welcome to my data analyst portfolio. Here you'll find my projects, skills, and work showcasing how I approach data-driven problem solving.</p>
-    </header>
-
-    <div class="container">
-
-        <!-- ABOUT -->
-        <h2 id="about">About Me</h2>
-        <p>I recently graduated from Stonehill College with a B.S. in Business Administration, majoring in Marketing with a minor in Data Analytics. Throughout my academic experience and ongoing self-study, I developed a strong interest in data-driven decision-making and using analytics to understand patterns, optimize performance, and support strategic outcomes.</p>
-
-        <p>I am actively strengthening my technical foundation in SQL, Python, Excel, and visualization tools while building meaningful real-world projects. My goal is to grow into an analytical role where I can contribute insights, solve business problems, and work with complex datasets.</p>
-
-        <!-- SKILLS -->
-        <h2 id="skills">Skills</h2>
-        <ul>
-            <li><strong>SQL</strong> – Joins, aggregations, analytical queries, multi-table problems</li>
-            <li><strong>Python (Pandas)</strong> – Data cleaning, merging, analysis, exploration</li>
-            <li><strong>Excel</strong> – Pivot tables, formulas, dashboards, data cleaning</li>
-            <li><strong>Tableau / Power BI</strong> – Interactive dashboards & data storytelling</li>
-            <li><strong>Data Cleaning</strong> – Missing values, formatting, transformations</li>
-            <li><strong>Visualization</strong> – Clear charts to explain trends and insights</li>
-            <li><strong>Analytical Thinking</strong> – Pattern recognition & logical analysis</li>
-            <li><strong>Communication</strong> – Breaking down insights clearly for stakeholders</li>
-        </ul>
-
-        <!-- PROJECTS -->
-        <h2 id="projects">Projects</h2>
-
-        <div class="project-grid">
-
-            <!-- PROJECT CARD -->
-            <div class="project-card">
-                <h3>March Madness Predictive Modeling</h3>
-                <p>Built a logistic regression model to predict NCAA tournament outcomes using FiveThirtyEight ratings, historical matchups, and HeatCheck data.</p>
-                <ul>
-                    <li>72% training accuracy</li>
-                    <li>63% testing accuracy</li>
-                    <li>Feature engineering: rating diff, seed diff, pool value diff</li>
-                </ul>
-                <a href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions" target="_blank">View Project</a>
-            </div>
-
-            <!-- FUTURE PROJECT CARDS CAN GO HERE -->
-            <div class="project-card">
-                <h3>Coming Soon</h3>
-                <p>Additional projects will be added shortly.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Coming Soon</h3>
-                <p>More analytics work will be posted here.</p>
-            </div>
-        </div>
-
-        <!-- RESUME -->
-        <h2 id="resume">Resume</h2>
-        <div class="resume-box">
-            <a href="resume.pdf" target="_blank">Download My Resume (PDF)</a>
-        </div>
-
-        <!-- CONTACT -->
-        <h2 id="contact">Contact</h2>
-        <p>Email: <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a></p>
-
+      </div>
+      <div class="nav-right">
+        <button class="btn-toggle" id="modeToggle">
+          <span id="modeLabel">Dark mode</span>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <footer>
-        © 2025 Chance Fry — All Rights Reserved  
-    </footer>
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-tag">
+          Data Analytics • SQL • Python
+        </div>
+        <h1 class="hero-title">Data Analyst Portfolio</h1>
+        <p class="hero-subtitle">
+          I’m a recent Stonehill College graduate with a background in Marketing and Data Analytics,
+          focused on turning messy data into clear, actionable insights for real-world problems.
+        </p>
 
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="resume.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-title">Current Focus</div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.15rem;">
+          Strengthening SQL, Python, and dashboarding while building portfolio projects in sports and business analytics.
+        </p>
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-label">Primary Tools</div>
+            <div class="metric-value">SQL · Python · Excel · Power BI</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Project Domains</div>
+            <div class="metric-value">Sports & Business Analytics</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="section-sub">
+        Business mindset + analytics toolkit, with hands-on experience from coursework and independent projects.
+      </p>
+      <div class="about-text">
+        <p>
+          I recently graduated from Stonehill College with a B.S. in Business Administration, majoring in Marketing with a minor in Data Analytics. Throughout my academic experience and ongoing self-study, I developed a strong interest in data-driven decision-making and using analytics to understand patterns, optimize performance, and support strategic outcomes.
+        </p>
+        <p>
+          I am actively strengthening my technical foundation in SQL, Python, Excel, and visualization tools while building real-world projects to showcase my skills. My goal is to grow into an analytical role where I can contribute meaningful insights, work with complex datasets, and continue improving as a data professional.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p class="section-sub">
+        Tools and concepts I’m comfortable using in analysis, reporting, and problem solving.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-pill"><strong>SQL</strong> – Joins, aggregations, filters, multi-table queries</div>
+        <div class="skill-pill"><strong>Python (Pandas)</strong> – Cleaning, merging, feature engineering</div>
+        <div class="skill-pill"><strong>Excel</strong> – Functions, pivot tables, dashboards</div>
+        <div class="skill-pill"><strong>Power BI / Tableau</strong> – Interactive dashboards & visual storytelling</div>
+        <div class="skill-pill"><strong>Data Cleaning</strong> – Handling missing values & inconsistent formats</div>
+        <div class="skill-pill"><strong>Visualization</strong> – Clear, focused charts for insights</div>
+        <div class="skill-pill"><strong>Analytical Thinking</strong> – Pattern recognition, breaking down problems</div>
+        <div class="skill-pill"><strong>Communication</strong> – Explaining results in plain language</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="section-sub">
+        Selected work that highlights how I approach data cleaning, feature engineering, and modeling.
+      </p>
+
+      <div class="projects-grid">
+        <!-- March Madness project -->
+        <article class="project-card">
+          <img
+            src="march-madness-thumbnail.png"
+            alt="March Madness Predictive Modeling thumbnail"
+            class="project-thumb"
+          />
+          <div class="project-body">
+            <div class="project-title">March Madness Predictive Modeling</div>
+            <div class="project-meta">
+              Python · Pandas · Scikit-Learn · Sports Analytics
+            </div>
+            <ul class="project-list">
+              <li>Built a logistic regression model to predict NCAA March Madness matchups.</li>
+              <li>Merged historical matchups with FiveThirtyEight ratings and HeatCheck tournament data.</li>
+              <li>Engineered features like power rating difference, seed difference, and pool value difference.</li>
+              <li>Achieved 72% training accuracy and 63% testing accuracy.</li>
+            </ul>
+            <div class="project-footer">
+              <a
+                class="btn btn-primary btn-small"
+                href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions"
+                target="_blank"
+              >
+                View Project
+              </a>
+              <a
+                class="btn btn-ghost btn-small"
+                href="https://github.com/chancefry21/chance-portfolio-site/blob/main/march-madness-predictions/Case_Study_3.ipynb"
+                target="_blank"
+              >
+                View Notebook
+              </a>
+            </div>
+            <div class="project-tag">
+              Focus: feature engineering, model evaluation, real-world unpredictability.
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder cards for future work -->
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-title">Coming Soon</div>
+            <div class="project-meta">SQL · Business Analytics</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              A future project focused on using SQL to answer real business-style questions using relational data.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-body">
+            <div class="project-title">Coming Soon</div>
+            <div class="project-meta">Power BI / Excel · Reporting</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              A dashboard/reporting project showcasing KPIs, trends, and insights in a clean visual format.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <p class="section-sub">
+        Full overview of my education, skills, and experience.
+      </p>
+      <div class="resume-card">
+        <strong>Download My Resume</strong>
+        <p>
+          View a full summary of my background in Marketing and Data Analytics, including technical skills, coursework, and work experience.
+        </p>
+        <a class="btn btn-primary btn-small" href="resume.pdf" target="_blank">
+          Open Resume (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-sub">
+        Open to analyst roles, early-career opportunities, and projects that involve using data to answer real questions.
+      </p>
+      <p class="contact-line">
+        Email: <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Chance Fry — Data Analyst Portfolio
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("modeToggle");
+    const modeLabel = document.getElementById("modeLabel");
+
+    function setMode(dark) {
+      if (dark) {
+        document.body.classList.add("dark");
+        modeLabel.textContent = "Light mode";
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.body.classList.remove("dark");
+        modeLabel.textContent = "Dark mode";
+        localStorage.setItem("theme", "light");
+      }
+    }
+
+    // Load saved preference
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") {
+      setMode(true);
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const isDark = document.body.classList.contains("dark");
+      setMode(!isDark);
+    });
+  </script>
 </body>
 </html>
