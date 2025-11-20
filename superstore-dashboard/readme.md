@@ -4,7 +4,7 @@ This Tableau dashboard provides an interactive analysis of Superstore sales, pro
 
 ---
 
-## 📊 Dashboard Overview
+## Dashboard Overview
 
 The dashboard includes:
 
@@ -18,7 +18,7 @@ The dashboard includes:
 
 ---
 
-## 🧠 Key Insights (Based on Dataset)
+## Key Insights (Based on Dataset)
 
 ### **Category Performance**
 - **Technology** generated the **highest total sales**.
@@ -49,7 +49,7 @@ The dashboard includes:
 
 ---
 
-## 🛠 Tools & Skills Used
+## Tools & Skills Used
 
 - Tableau Desktop  
 - Tableau Public  
@@ -60,7 +60,7 @@ The dashboard includes:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 
@@ -78,13 +78,13 @@ The dashboard includes:
 
 ---
 
-## 🔗 Live Dashboard
+## Live Dashboard
 
 **[View the Tableau Public Dashboard](https://public.tableau.com/views/SuperstoreDashboard-ChanceFry/Dashboard12?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Add KPI tiles (Total Sales, Total Profit, YOY Change)
 - Add discount analysis impacting profit
