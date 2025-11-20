@@ -37,14 +37,14 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, sans-serif;
       background: radial-gradient(circle at top, #eff6ff 0, var(--bg) 45%);
       color: var(--text);
       line-height: 1.6;
     }
 
     /* NAVBAR */
+
     nav {
       position: sticky;
       top: 0;
@@ -137,6 +137,7 @@
     }
 
     /* LAYOUT */
+
     .page {
       max-width: 1080px;
       margin: 0 auto;
@@ -144,6 +145,7 @@
     }
 
     /* HERO */
+
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -226,88 +228,8 @@
       color: var(--accent);
     }
 
-    .hero-card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 1.2rem 1.3rem;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
+    /* PROJECTS SECTION */
 
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.8rem;
-      margin-top: 0.8rem;
-    }
-
-    .metric {
-      background: var(--bg-alt);
-      padding: 0.55rem 0.7rem;
-      border-radius: 10px;
-      font-size: 0.75rem;
-    }
-
-    .metric-label {
-      color: var(--text-muted);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .metric-value {
-      font-weight: 600;
-      margin-top: 0.15rem;
-    }
-
-    /* SECTIONS */
-    section {
-      margin-top: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1.2rem;
-    }
-
-    /* ABOUT */
-    .about-text p {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
-
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.9rem;
-    }
-
-    .skill-pill {
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      padding: 0.5rem 0.8rem;
-      font-size: 0.85rem;
-    }
-
-    .skill-pill strong {
-      font-weight: 600;
-    }
-
-    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -376,43 +298,8 @@
       padding: 0.4rem 0.9rem;
     }
 
-    .project-tag {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    /* RESUME */
-    .resume-card {
-      max-width: 360px;
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 1rem 1.1rem;
-      box-shadow: var(--shadow);
-    }
-
-    .resume-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-      margin-bottom: 0.8rem;
-    }
-
-    /* CONTACT */
-    .contact-line {
-      font-size: 0.95rem;
-    }
-
-    .contact-line a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-line a:hover {
-      text-decoration: underline;
-    }
-
     /* FOOTER */
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem;
@@ -422,7 +309,9 @@
     }
   </style>
 </head>
+
 <body>
+
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
@@ -430,6 +319,7 @@
         <div class="nav-logo">C</div>
         <div class="nav-name">Chance Fry</div>
       </div>
+
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -437,6 +327,7 @@
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
+
       <div class="nav-right">
         <button class="btn-toggle" id="modeToggle">
           <span id="modeLabel">Dark mode</span>
@@ -446,16 +337,16 @@
   </nav>
 
   <main class="page">
+
     <!-- HERO -->
     <section class="hero">
       <div>
-        <div class="hero-tag">
-          Data Analytics • SQL • Python
-        </div>
+        <div class="hero-tag">Data Analytics • SQL • Python</div>
         <h1 class="hero-title">Data Analyst Portfolio</h1>
+
         <p class="hero-subtitle">
-          I’m a recent Stonehill College graduate with a background in Marketing and Data Analytics,
-          focused on turning messy data into clear, actionable insights for real-world problems.
+          I’m a recent Stonehill graduate with a background in Marketing & Data Analytics,
+          focused on turning messy data into clear, actionable insights.
         </p>
 
         <div class="hero-buttons">
@@ -463,158 +354,108 @@
           <a class="btn btn-ghost" href="resume.pdf" target="_blank">Download Resume</a>
         </div>
       </div>
-
-      <aside class="hero-card">
-        <div class="hero-card-title">Current Focus</div>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.15rem;">
-          Strengthening SQL, Python, and dashboarding while building portfolio projects in sports and business analytics.
-        </p>
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-label">Primary Tools</div>
-            <div class="metric-value">SQL · Python · Excel · Power BI</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Project Domains</div>
-            <div class="metric-value">Sports & Business Analytics</div>
-          </div>
-        </div>
-      </aside>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
-      <p class="section-sub">
-        Business mindset + analytics toolkit, with hands-on experience from coursework and independent projects.
+      <p>
+        I recently graduated from Stonehill College with a B.S. in Business Administration,
+        majoring in Marketing with a minor in Data Analytics. I developed a strong interest in
+        using data to understand patterns, optimize performance, and support decision-making.
       </p>
-      <div class="about-text">
-        <p>
-          I recently graduated from Stonehill College with a B.S. in Business Administration, majoring in Marketing with a minor in Data Analytics. Throughout my academic experience and ongoing self-study, I developed a strong interest in data-driven decision-making and using analytics to understand patterns, optimize performance, and support strategic outcomes.
-        </p>
-        <p>
-          I am actively strengthening my technical foundation in SQL, Python, Excel, and visualization tools while building real-world projects to showcase my skills. My goal is to grow into an analytical role where I can contribute meaningful insights, work with complex datasets, and continue improving as a data professional.
-        </p>
-      </div>
+      <p>
+        I'm actively strengthening my technical foundation in SQL, Python, Excel, and dashboard tools while building real projects that show my approach to analytics and problem-solving.
+      </p>
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
       <h2>Skills</h2>
-      <p class="section-sub">
-        Tools and concepts I’m comfortable using in analysis, reporting, and problem solving.
-      </p>
       <div class="skills-grid">
-        <div class="skill-pill"><strong>SQL</strong> – Joins, aggregations, filters, multi-table queries</div>
-        <div class="skill-pill"><strong>Python (Pandas)</strong> – Cleaning, merging, feature engineering</div>
-        <div class="skill-pill"><strong>Excel</strong> – Functions, pivot tables, dashboards</div>
-        <div class="skill-pill"><strong>Power BI / Tableau</strong> – Interactive dashboards & visual storytelling</div>
-        <div class="skill-pill"><strong>Data Cleaning</strong> – Handling missing values & inconsistent formats</div>
-        <div class="skill-pill"><strong>Visualization</strong> – Clear, focused charts for insights</div>
-        <div class="skill-pill"><strong>Analytical Thinking</strong> – Pattern recognition, breaking down problems</div>
-        <div class="skill-pill"><strong>Communication</strong> – Explaining results in plain language</div>
+        <div class="skill-pill"><strong>SQL</strong> – Joins, filtering, aggregations</div>
+        <div class="skill-pill"><strong>Python (Pandas)</strong> – Cleaning, merging, modeling</div>
+        <div class="skill-pill"><strong>Excel</strong> – Formulas, pivot tables, dashboards</div>
+        <div class="skill-pill"><strong>Power BI / Tableau</strong> – Interactive dashboards</div>
+        <div class="skill-pill"><strong>Data Cleaning</strong> – Fixing messy datasets</div>
+        <div class="skill-pill"><strong>Visualization</strong> – Clear and focused charts</div>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
       <h2>Projects</h2>
-      <p class="section-sub">
-        Selected work that highlights how I approach data cleaning, feature engineering, and modeling.
-      </p>
 
       <div class="projects-grid">
-        <!-- March Madness project -->
+
+        <!-- March Madness -->
         <article class="project-card">
-          <img
-            src="march-madness-thumbnail.png"
-            alt="March Madness Predictive Modeling thumbnail"
-            class="project-thumb"
-          />
+          <img src="march-madness-thumbnail.png" class="project-thumb">
           <div class="project-body">
             <div class="project-title">March Madness Predictive Modeling</div>
-            <div class="project-meta">
-              Python · Pandas · Scikit-Learn · Sports Analytics
-            </div>
+            <div class="project-meta">Python • Pandas • Scikit-Learn</div>
+
             <ul class="project-list">
-              <li>Built a logistic regression model to predict NCAA March Madness matchups.</li>
-              <li>Merged historical matchups with FiveThirtyEight ratings and HeatCheck tournament data.</li>
-              <li>Engineered features like power rating difference, seed difference, and pool value difference.</li>
-              <li>Achieved 72% training accuracy and 63% testing accuracy.</li>
+              <li>Built logistic regression model predicting NCAA matchups.</li>
+              <li>Engineered features: rating diff, seed diff, pool value diff.</li>
+              <li>Achieved 72% train / 63% test accuracy.</li>
             </ul>
+
             <div class="project-footer">
-              <a
-                class="btn btn-primary btn-small"
-                href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions"
-                target="_blank"
-              >
-                View Project
-              </a>
-              <a
-                class="btn btn-ghost btn-small"
-                href="https://github.com/chancefry21/chance-portfolio-site/blob/main/march-madness-predictions/MarchMadnessPredictions.ipynb"
-                target="_blank"
-              >
-                View Notebook
-              </a>
-            </div>
-            <div class="project-tag">
-              Focus: feature engineering, model evaluation, real-world unpredictability.
+              <a class="btn btn-primary btn-small"
+                 href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions"
+                 target="_blank">View Project</a>
+
+              <a class="btn btn-ghost btn-small"
+                 href="https://github.com/chancefry21/chance-portfolio-site/blob/main/march-madness-predictions/MarchMadnessPredictions.ipynb"
+                 target="_blank">View Notebook</a>
             </div>
           </div>
         </article>
 
-        <!-- Placeholder cards for future work -->
-        <div class="project-card">
-    <h3>SkyHawk Bank SQL Database</h3>
-    <p>A full MySQL database system designed for a fictional bank. Includes multi-table schema, sample data, and analytical SQL queries.</p>
-    <a href="https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database" class="btn">View Project</a>
-</div>
-
+        <!-- SQL BANK PROJECT -->
         <article class="project-card">
+          <img src="sql-bank-thumbnail.png" class="project-thumb">
           <div class="project-body">
-            <div class="project-title">Coming Soon</div>
-            <div class="project-meta">Power BI / Excel · Reporting</div>
-            <p style="font-size:0.85rem; color:var(--text-muted);">
-              A dashboard/reporting project showcasing KPIs, trends, and insights in a clean visual format.
-            </p>
+            <div class="project-title">SkyHawk Bank SQL Database</div>
+            <div class="project-meta">MySQL • Database Design • Queries</div>
+
+            <ul class="project-list">
+              <li>Built a multi-table banking database (normalized schema).</li>
+              <li>Includes customers, accounts, cards, branches, employees.</li>
+              <li>Designed analytical SQL queries for real business insights.</li>
+              <li>Includes schema, inserts, ERD & slide deck.</li>
+            </ul>
+
+            <div class="project-footer">
+              <a class="btn btn-primary btn-small"
+                 href="https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database"
+                 target="_blank">View Project</a>
+              <a class="btn btn-ghost btn-small"
+                 href="SkyHawk%20Bank%20Database%20SQL.pdf"
+                 target="_blank">View Slide Deck</a>
+            </div>
           </div>
         </article>
+
       </div>
     </section>
 
     <!-- RESUME -->
     <section id="resume">
       <h2>Resume</h2>
-      <p class="section-sub">
-        Full overview of my education, skills, and experience.
-      </p>
-      <div class="resume-card">
-        <strong>Download My Resume</strong>
-        <p>
-          View a full summary of my background in Marketing and Data Analytics, including technical skills, coursework, and work experience.
-        </p>
-        <a class="btn btn-primary btn-small" href="resume.pdf" target="_blank">
-          Open Resume (PDF)
-        </a>
-      </div>
+      <a class="btn btn-primary" href="resume.pdf" target="_blank">Download Resume</a>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
-      <p class="section-sub">
-        Open to analyst roles, early-career opportunities, and projects that involve using data to answer real questions.
-      </p>
-      <p class="contact-line">
-        Email: <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a>
-      </p>
+      <p>Email: <a href="mailto:chancefry21@gmail.com">chancefry21@gmail.com</a></p>
     </section>
+
   </main>
 
-  <footer>
-    © 2025 Chance Fry — Data Analyst Portfolio
-  </footer>
+  <footer>© 2025 Chance Fry — Data Analyst Portfolio</footer>
 
   <script>
     const toggleBtn = document.getElementById("modeToggle");
@@ -632,7 +473,6 @@
       }
     }
 
-    // Load saved preference
     const saved = localStorage.getItem("theme");
     if (saved === "dark") {
       setMode(true);
@@ -643,5 +483,6 @@
       setMode(!isDark);
     });
   </script>
+
 </body>
 </html>
