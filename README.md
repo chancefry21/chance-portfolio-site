@@ -54,8 +54,23 @@ After merging FiveThirtyEight ratings, historical matchups, and HeatCheck tourna
 [march-madness-predictions](https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions)
 
 
-### **Project 2: (To Be Added)**
-Summary of the analytical question, data preparation, and final insights.
+## **Project 2: SkyHawk Bank SQL Database**
+
+**Tools:** MySQL, SQL schema design, ERD planning
+**Skills Demonstrated:** database design, normalization, query writing, schema creation, data modeling
+
+Built a full relational database for a fictional bank, including customers, accounts, employees, branches, cards, transactions, and account balance history. Designed a complete SQL schema, sample data, and analysis queries to reflect realistic banking operations.
+
+**What’s Included:**
+
+* `tables.sql` — full schema with all relationships
+* `inserts.sql` — realistic sample dataset
+* `sample-queries.sql` — analytical SQL queries
+* `project-presentation.pdf` — slide deck explaining the database
+
+**View Project:**
+👉 [https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database](https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database)
+
 
 ### **Project 3: (To Be Added)**
 Overview of the project scope, methodology, and impact of your findings.
