@@ -1,20 +1,67 @@
-# **A) Perfect Portfolio Description (copy/paste ready)**
+# **Superstore Sales & Profit Dashboard (Tableau)**
 
-**Project: Superstore Sales & Profit Dashboard (Tableau)**
-**Tools:** Tableau, Excel/CSV, Data Cleaning, Visualization
+This project analyzes sales, profit, and discount trends using the Superstore dataset. The interactive Tableau dashboard highlights top-performing product categories, underperforming regions, and discount-driven profitability issues — providing business-ready insights for retail decision-making.
 
-**Summary:**
-Built an interactive analytics dashboard to evaluate sales, profit, and discount patterns across regions, categories, and subcategories in the Superstore dataset. Designed the dashboard for business stakeholders to quickly identify high-performing segments, unprofitable areas, and regional sales trends.
+**View the Dashboard:**
+[https://public.tableau.com/app/profile/chance.fry/viz/SuperstoreDashboard-ChanceFry/Dashboard1](https://public.tableau.com/app/profile/chance.fry/viz/SuperstoreDashboard-ChanceFry/Dashboard1)
 
-**Key Contributions:**
+---
 
-* Developed KPIs summarizing total sales, profit, and order volume
-* Created interactive charts including bar charts, maps, and category breakdowns
-* Added dynamic filters for Category, Region, and Date to support drill-down analysis
-* Revealed key insights — Technology drives the highest profit margin, while heavy discounting reduces profitability in Office Supplies
-* Packaged insights into an executive-ready dashboard with clean layout and labeled visuals
+## **Project Objective**
 
-**Impact:**
-Enabled clear visibility into product performance and highlighted actionable opportunities to reduce unnecessary discounting and improve regional sales strategy.
+Build a clean, executive-ready analytics dashboard that answers key business questions:
 
+* Which categories and subcategories generate the most profit?
+* How do discounts affect profitability?
+* Which regions perform the strongest or weakest?
+* What trends should leadership focus on to improve margins?
 
+---
+
+## **Tools & Skills Used**
+
+* **Tableau** – dashboard design, KPI tiles, mapping, filters
+* **Excel / CSV** – data prep
+* **Data Visualization** – bar charts, heatmaps, category analysis
+* **Analytical Thinking** – identifying profit drivers and discount effects
+
+---
+
+## **Key Insights**
+
+* **Technology** is the most profitable category.
+* **Office Supplies** shows strong sales but low profit due to aggressive discounting.
+* **Furniture** generates revenue but has inconsistent margins.
+* The **South region** underperforms compared to West and Central.
+* Higher discount rates correlate with lower profitability.
+
+---
+
+## **Dashboard Features**
+
+* Interactive filters (Category, Region, Segment)
+* KPI summaries for Sales, Profit, Order Count
+* U.S. regional profit heatmap
+* Category and subcategory breakdowns
+* Clean, concise layout for decision-makers
+
+---
+
+## **Repository Structure**
+
+```
+/superstore-tableau-dashboard
+│
+├── README.md               # Project overview and documentation
+├── dashboard.png           # Screenshot of the Tableau dashboard
+└── data/                   # (Optional) Source data files
+```
+
+---
+
+## **Future Enhancements**
+
+* Add monthly/quarterly trends
+* Build discount elasticity analysis
+* Add drill-down views
+* Convert analysis into a Tableau Story
