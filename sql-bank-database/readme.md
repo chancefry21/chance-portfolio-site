@@ -15,7 +15,7 @@ The project includes:
 * Realistic sample data (`inserts.sql`)
 * Analysis and reporting queries (`sample-queries.sql`)
 * ERD-style relationship structure
-* Original class project slide deck
+* Slide deck
 
 This project demonstrates strong SQL fundamentals and practical database design.
 
