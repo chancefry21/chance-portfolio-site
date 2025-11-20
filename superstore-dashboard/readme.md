@@ -66,9 +66,9 @@ The dashboard includes:
 
 /tableau-superstore-dashboard
 │
-├── dashboard-preview.png        <-- ONE screenshot (optional but recommended)
+├── dashboard-preview.png      
 │
-└── README.md                    <-- Your finished project description
+└── README.md                    
 
 
 ```
