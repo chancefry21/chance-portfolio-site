@@ -30,10 +30,7 @@
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
     }
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -44,7 +41,6 @@
     }
 
     /* NAVBAR */
-
     nav {
       position: sticky;
       top: 0;
@@ -54,24 +50,15 @@
       border-bottom: 1px solid var(--border);
     }
 
-    body.dark nav {
-      background: rgba(15, 23, 42, 0.9);
-    }
+    body.dark nav { background: rgba(15, 23, 42, 0.9); }
 
     .nav-inner {
       max-width: 1080px;
       margin: 0 auto;
       padding: 0.6rem 1.25rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .nav-left {
-      display: flex;
       align-items: center;
-      gap: 0.5rem;
     }
 
     .nav-logo {
@@ -80,29 +67,17 @@
       border-radius: 999px;
       background: linear-gradient(135deg, #1d4ed8, #38bdf8);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       color: white;
       font-weight: 700;
-      font-size: 18px;
       box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
-    }
-
-    .nav-name {
-      font-weight: 600;
-      letter-spacing: 0.03em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.95rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-muted);
+      margin-left: 1rem;
       padding: 0.25rem 0.5rem;
       border-radius: 999px;
     }
@@ -112,32 +87,16 @@
       background: var(--accent-soft);
     }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
     .btn-toggle {
+      padding: 0.25rem 0.8rem;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: var(--card-bg);
-      padding: 0.25rem 0.8rem;
       cursor: pointer;
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
       color: var(--text-muted);
     }
 
-    .btn-toggle:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     /* LAYOUT */
-
     .page {
       max-width: 1080px;
       margin: 0 auto;
@@ -145,27 +104,20 @@
     }
 
     /* HERO */
-
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      grid-template-columns: 3fr 2fr;
       gap: 2.5rem;
       align-items: center;
-      margin-top: 2rem;
-      margin-bottom: 2.5rem;
     }
 
     @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+      .hero { grid-template-columns: 1fr; }
     }
 
     .hero-title {
       font-size: 2.3rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.4rem;
     }
 
     .hero-subtitle {
@@ -174,36 +126,16 @@
       max-width: 540px;
     }
 
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-buttons {
-      margin-top: 1.4rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
+    .hero-buttons { margin-top: 1.4rem; display: flex; gap: 0.75rem; }
 
     .btn {
       border-radius: 999px;
-      border: 1px solid transparent;
       padding: 0.55rem 1.2rem;
       font-size: 0.9rem;
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
       font-weight: 500;
     }
 
@@ -213,23 +145,12 @@
       box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
     }
 
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
-
     .btn-ghost {
-      background: transparent;
-      border-color: var(--border);
+      border: 1px solid var(--border);
       color: var(--text);
     }
 
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* PROJECTS SECTION */
-
+    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -244,14 +165,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      min-height: 100%;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: 0.2s ease;
     }
 
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
       border-color: var(--accent);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
     }
 
     .project-thumb {
@@ -261,44 +181,11 @@
       background: #e5e7eb;
     }
 
-    .project-body {
-      padding: 1rem 1.1rem 1.1rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .project-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .project-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .project-list {
-      font-size: 0.85rem;
-      padding-left: 1.1rem;
-      margin: 0.4rem 0;
-    }
-
-    .project-footer {
-      margin-top: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
-    }
-
-    .btn-small {
-      font-size: 0.8rem;
-      padding: 0.4rem 0.9rem;
-    }
-
-    /* FOOTER */
+    .project-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .project-title { font-size: 1rem; font-weight: 600; }
+    .project-meta { font-size: 0.8rem; color: var(--text-muted); }
+    .project-list { font-size: 0.85rem; padding-left: 1rem; }
+    .project-footer { margin-top: auto; display: flex; gap: 0.5rem; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -328,11 +215,9 @@
         <a href="#contact">Contact</a>
       </div>
 
-      <div class="nav-right">
-        <button class="btn-toggle" id="modeToggle">
-          <span id="modeLabel">Dark mode</span>
-        </button>
-      </div>
+      <button class="btn-toggle" id="modeToggle">
+        <span id="modeLabel">Dark mode</span>
+      </button>
     </div>
   </nav>
 
@@ -343,7 +228,6 @@
       <div>
         <div class="hero-tag">Data Analytics • SQL • Python</div>
         <h1 class="hero-title">Data Analyst Portfolio</h1>
-
         <p class="hero-subtitle">
           I’m a recent Stonehill graduate with a background in Marketing & Data Analytics,
           focused on turning messy data into clear, actionable insights.
@@ -361,11 +245,10 @@
       <h2>About Me</h2>
       <p>
         I recently graduated from Stonehill College with a B.S. in Business Administration,
-        majoring in Marketing with a minor in Data Analytics. I developed a strong interest in
-        using data to understand patterns, optimize performance, and support decision-making.
+        majoring in Marketing with a minor in Data Analytics.
       </p>
       <p>
-        I'm actively strengthening my technical foundation in SQL, Python, Excel, and dashboard tools while building real projects that show my approach to analytics and problem-solving.
+        I’m actively strengthening my foundation in SQL, Python, Excel, and dashboard tools while building real-world analytics projects.
       </p>
     </section>
 
@@ -373,12 +256,12 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-pill"><strong>SQL</strong> – Joins, filtering, aggregations</div>
-        <div class="skill-pill"><strong>Python (Pandas)</strong> – Cleaning, merging, modeling</div>
-        <div class="skill-pill"><strong>Excel</strong> – Formulas, pivot tables, dashboards</div>
-        <div class="skill-pill"><strong>Power BI / Tableau</strong> – Interactive dashboards</div>
-        <div class="skill-pill"><strong>Data Cleaning</strong> – Fixing messy datasets</div>
-        <div class="skill-pill"><strong>Visualization</strong> – Clear and focused charts</div>
+        <div class="skill-pill"><strong>SQL</strong> – Joins, aggregation, filtering</div>
+        <div class="skill-pill"><strong>Python</strong> – Pandas, cleaning, modeling</div>
+        <div class="skill-pill"><strong>Excel</strong> – Formulas, pivots, dashboards</div>
+        <div class="skill-pill"><strong>Tableau / Power BI</strong> – Dashboards</div>
+        <div class="skill-pill"><strong>EDA</strong> – Pattern detection, insights</div>
+        <div class="skill-pill"><strong>Visualization</strong> – Storytelling with data</div>
       </div>
     </section>
 
@@ -388,7 +271,7 @@
 
       <div class="projects-grid">
 
-        <!-- March Madness -->
+        <!-- 1) March Madness -->
         <article class="project-card">
           <img src="march-madness-thumbnail.png" class="project-thumb">
           <div class="project-body">
@@ -396,45 +279,70 @@
             <div class="project-meta">Python • Pandas • Scikit-Learn</div>
 
             <ul class="project-list">
-              <li>Built logistic regression model predicting NCAA matchups.</li>
-              <li>Engineered features: rating diff, seed diff, pool value diff.</li>
-              <li>Achieved 72% train / 63% test accuracy.</li>
+              <li>Logistic regression model predicting NCAA outcomes</li>
+              <li>Created features like rating diff & seed diff</li>
+              <li>72% training accuracy, 63% testing</li>
             </ul>
 
             <div class="project-footer">
               <a class="btn btn-primary btn-small"
-                 href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions"
-                 target="_blank">View Project</a>
-
+                href="https://github.com/chancefry21/chance-portfolio-site/tree/main/march-madness-predictions"
+                target="_blank">View Project</a>
               <a class="btn btn-ghost btn-small"
-                 href="https://github.com/chancefry21/chance-portfolio-site/blob/main/march-madness-predictions/MarchMadnessPredictions.ipynb"
-                 target="_blank">View Notebook</a>
+                href="https://github.com/chancefry21/chance-portfolio-site/blob/main/march-madness-predictions/MarchMadnessPredictions.ipynb"
+                target="_blank">Notebook</a>
             </div>
           </div>
         </article>
 
-        <!-- SQL BANK PROJECT -->
+        <!-- 2) SQL Bank -->
         <article class="project-card">
           <img src="sql-bank-thumbnail.png" class="project-thumb">
           <div class="project-body">
             <div class="project-title">SkyHawk Bank SQL Database</div>
-            <div class="project-meta">MySQL • Database Design • Queries</div>
+            <div class="project-meta">MySQL • ERD • Data Modeling</div>
 
             <ul class="project-list">
-              <li>Built a multi-table banking database (normalized schema).</li>
-              <li>Includes customers, accounts, cards, branches, employees.</li>
-              <li>Designed analytical SQL queries for real business insights.</li>
-              <li>Includes schema, inserts, ERD & slide deck.</li>
+              <li>Built a multi-table banking database</li>
+              <li>Customers, accounts, cards, employees, transactions</li>
+              <li>Analytical SQL queries for insights</li>
+              <li>Schema + inserts + slide deck included</li>
             </ul>
 
             <div class="project-footer">
               <a class="btn btn-primary btn-small"
-                 href="https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database"
-                 target="_blank">View Project</a>
-              <a class="btn btn-ghost btn-small"
-                 href= https://raw.githubusercontent.com/chancefry21/chance-portfolio-site/main/sql-bank-database/SkyHawk%20Bank%20Database%20SQL.pptx
+                href="https://github.com/chancefry21/chance-portfolio-site/tree/main/sql-bank-database"
+                target="_blank">View Project</a>
 
-                 target="_blank">View Slide Deck</a>
+              <a class="btn btn-ghost btn-small"
+                href="https://raw.githubusercontent.com/chancefry21/chance-portfolio-site/main/sql-bank-database/SkyHawk%20Bank%20Database%20SQL.pptx"
+                target="_blank">Slide Deck</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3) Superstore Tableau Dashboard -->
+        <article class="project-card">
+          <img src="superstore-thumbnail.png" class="project-thumb">
+          <div class="project-body">
+            <div class="project-title">Superstore Sales Dashboard (2018–2022)</div>
+            <div class="project-meta">Tableau • EDA • Visualization</div>
+
+            <ul class="project-list">
+              <li>Interactive dashboard analyzing sales & profit</li>
+              <li>Category & sub-category performance insights</li>
+              <li>Regional trends and time-series analysis</li>
+              <li>Fully filter-driven interactive experience</li>
+            </ul>
+
+            <div class="project-footer">
+              <a class="btn btn-primary btn-small"
+                href="https://public.tableau.com/shared/X7H63ZW6J?:display_count=n&:origin=viz_share_link"
+                target="_blank">View Dashboard</a>
+
+              <a class="btn btn-ghost btn-small"
+                href="https://github.com/chancefry21/chance-portfolio-site/tree/main/tableau-superstore-dashboard"
+                target="_blank">View Files</a>
             </div>
           </div>
         </article>
@@ -475,13 +383,10 @@
     }
 
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      setMode(true);
-    }
+    if (saved === "dark") setMode(true);
 
     toggleBtn.addEventListener("click", () => {
-      const isDark = document.body.classList.contains("dark");
-      setMode(!isDark);
+      setMode(!document.body.classList.contains("dark"));
     });
   </script>
 
