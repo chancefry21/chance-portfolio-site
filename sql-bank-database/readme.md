@@ -1,155 +1,137 @@
-# SQL Bank Database Project
+# **SkyHawk Bank SQL Database**
 
-This project models a realistic banking system using SQL. It demonstrates database design, table creation, data insertion, and analytical queries that reflect real financial operations. The goal was to build a fully relational SQL database that supports customers, accounts, employees, branches, cards, and transactions while enforcing proper business rules and constraints.
-
-This project was originally created as part of a database systems course, and I rebuilt and organized it for my data analytics portfolio.
-
----
-
-## 📌 Project Features
-
-- Full relational database design  
-- Logical business rules and constraints  
-- ERD (Entity Relationship Diagram)  
-- `CREATE TABLE` SQL script  
-- `INSERT` data script  
-- Realistic SQL queries for banking operations  
-- Supports customers, accounts, balances, transactions, cards, and employees  
+This project demonstrates the design and implementation of a full relational SQL database for a fictional financial institution, **SkyHawk Bank**.
+It highlights real-world data modeling, schema creation, and analytical SQL queries used to answer business questions.
 
 ---
 
-## 🧱 Database Structure
+## **Project Overview**
 
-The system contains the following core tables:
+The goal of this project was to build a **normalized, scalable database** that models banking operations such as customers, accounts, employees, cards, and transactions.
 
-- **Customers**
-- **Accounts**
-- **Cards**
-- **Transactions**
-- **Account Balance History**
-- **Employees**
-- **Branches**
+The project includes:
 
-Each table is linked by primary and foreign keys, following proper normalization.
+* Full MySQL schema (`tables.sql`)
+* Realistic sample data (`inserts.sql`)
+* Analysis and reporting queries (`sample-queries.sql`)
+* ERD-style relationship structure
+* Original class project slide deck
+
+This project demonstrates strong SQL fundamentals and practical database design.
 
 ---
 
-## 🗺️ ERD Diagram
+## **Database Structure**
 
-*(Insert ERD.png in your repo and it will render here automatically)*
+| Table                       | Description                                    |
+| --------------------------- | ---------------------------------------------- |
+| **branches**                | Bank locations and regions                     |
+| **customers**               | Customer personal and contact info             |
+| **employees**               | Bank staff assigned to branches                |
+| **accounts**                | Checking, savings, and credit accounts         |
+| **cards**                   | Debit/credit cards tied to accounts            |
+| **transactions**            | Deposits, withdrawals, transfers, and payments |
+| **account_balance_history** | Daily balance snapshots for trend analysis     |
+
+---
+
+## **Entity Relationships**
+
+Key relationships across the system:
+
+* A **branch** has many customers and employees
+* A **customer** can have multiple accounts
+* An **account** can have multiple cards and transactions
+* Each **transaction** links to a single account
+* **Balance history** tracks daily account balances per account
+
+---
+
+## **Technologies Used**
+
+* **MySQL**
+* SQL (DDL, DML, joins, aggregations, constraints)
+* Database normalization
+* Relational modeling
+
+---
+
+## **File Structure**
 
 ```
-![ERD](ERD.png)
+sql-bank-database/
+│── tables.sql               # Database schema
+│── inserts.sql              # Sample dataset
+│── sample-queries.sql       # Analytical SQL queries
+│── SkyHawk Bank Database SQL.pptx    # Project presentation
+│── README.md                # Documentation
 ```
 
 ---
 
-## 📝 Business Rules (Summarized)
+## **Sample Queries**
 
-- A customer can open multiple accounts.  
-- Each account is associated with a single branch.  
-- Employees may assist multiple customers.  
-- Cards belong to accounts (not directly to customers).  
-- Account balances are tracked over time.  
-- Transactions update account balances.  
-- Accounts must have at least one owner.  
+### 1. Total deposits by customer
 
-These reflect real-world banking constraints and workflows.
-
----
-
-## 🏗️ SQL Files Included
-
-### **1. tables.sql**  
-Contains all `CREATE TABLE` statements with:
-- Primary keys  
-- Foreign keys  
-- Data types  
-- Constraints  
-
-### **2. inserts.sql**  
-Sample data to populate the schema:
-- Customer records  
-- Accounts  
-- Cards  
-- Transactions  
-- Employee assignments  
-
-### **3. sample-queries.sql**  
-Analytical SQL queries including:
-- Customer account lookup  
-- Employee → Customer listing  
-- JOINs across multiple tables  
-- Add new customers / update accounts  
-- Transaction history queries  
-- String filtering with LIKE  
-- Aggregations  
-- Real banking insights  
-
----
-
-## 🔍 Example Analytical Queries
-
-### 1. Find all accounts for a given customer
 ```sql
-SELECT c.CustomerName, a.AccountNumber, a.AccountType
-FROM Customers c
-JOIN Accounts a ON c.CustomerID = a.CustomerID;
+SELECT c.customer_id,
+       c.first_name,
+       c.last_name,
+       SUM(t.amount) AS total_deposits
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customer_id
+JOIN transactions t ON a.account_id = t.account_id
+WHERE t.transaction_type = 'Deposit'
+GROUP BY c.customer_id;
 ```
 
-### 2. Find transactions for an account
+### 2. Monthly transaction volume
+
 ```sql
-SELECT t.TransactionID, t.Amount, t.Type, t.TransactionDate
-FROM Transactions t
-WHERE t.AccountID = 101;
+SELECT DATE_FORMAT(transaction_date, '%Y-%m') AS month,
+       COUNT(*) AS num_transactions,
+       SUM(amount) AS total_amount
+FROM transactions
+GROUP BY month
+ORDER BY month;
 ```
 
-### 3. Find employees who assisted a specific customer
+### 3. Highest average account balances
+
 ```sql
-SELECT e.EmployeeName, c.CustomerName
-FROM Employees e
-JOIN CustomerEmployee ce ON e.EmployeeID = ce.EmployeeID
-JOIN Customers c ON ce.CustomerID = c.CustomerID;
-```
-
-More queries are inside `sample-queries.sql`.
-
----
-
-## 🧪 How to Run the Project
-
-1. Open your SQL environment (MySQL, PostgreSQL, SQL Server, SQLite, etc.).  
-2. Run **tables.sql** to create all tables.  
-3. Run **inserts.sql** to populate sample data.  
-4. Run queries from **sample-queries.sql** to test functionality.
-
----
-
-## 📄 Presentation
-
-Full project slides are included as a PDF:
-```
-project-presentation.pdf
+SELECT a.account_id,
+       c.first_name,
+       c.last_name,
+       AVG(h.balance) AS avg_balance
+FROM accounts a
+JOIN customers c ON a.customer_id = c.customer_id
+JOIN account_balance_history h ON a.account_id = h.account_id
+GROUP BY a.account_id
+ORDER BY avg_balance DESC
+LIMIT 10;
 ```
 
 ---
 
-## 🧑‍💻 What I Learned
+## **Skills Demonstrated**
 
-- Designing normalized relational schemas  
-- Writing realistic SQL for business operations  
-- Managing foreign keys and constraints  
-- Modeling banking workflows in SQL  
-- Querying multi-table relational data  
-- Presenting technical work clearly  
-
----
-
-## 📫 Contact
-
-For questions or collaboration:
-
-**Email:** chancefry21@gmail.com
+* Relational database design
+* Table creation & constraints
+* Foreign keys and normalization
+* Writing business-style SQL queries
+* Analytical SQL for trends & reporting
+* Clean documentation of a database project
 
 ---
 
+## **Presentation**
+
+▶️ **[View Project Slide Deck](SkyHawk%20Bank%20Database%20SQL.pptx)**
+
+---
+
+## **Summary**
+
+This SQL project shows the practical skills needed for data analyst and BI roles, including database design, SQL querying, and translating real business logic into a structured data system.
+
+---
