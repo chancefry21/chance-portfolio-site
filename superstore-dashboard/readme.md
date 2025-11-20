@@ -1,67 +1,92 @@
-# **Superstore Sales & Profit Dashboard (Tableau)**
+# Superstore Analytics Dashboard — Sales, Profit & Regional Trends (2018–2022)
 
-This project analyzes sales, profit, and discount trends using the Superstore dataset. The interactive Tableau dashboard highlights top-performing product categories, underperforming regions, and discount-driven profitability issues — providing business-ready insights for retail decision-making.
-
-**View the Dashboard:**
-[https://public.tableau.com/app/profile/chance.fry/viz/SuperstoreDashboard-ChanceFry/Dashboard1](https://public.tableau.com/app/profile/chance.fry/viz/SuperstoreDashboard-ChanceFry/Dashboard1)
+This Tableau dashboard provides an interactive analysis of Superstore sales, profit, and cost data from **2018 through 2022**. The visualization is designed to highlight category performance, sub-category profitability, regional differences, and multi-year trends.
 
 ---
 
-## **Project Objective**
+## 📊 Dashboard Overview
 
-Build a clean, executive-ready analytics dashboard that answers key business questions:
+The dashboard includes:
 
-* Which categories and subcategories generate the most profit?
-* How do discounts affect profitability?
-* Which regions perform the strongest or weakest?
-* What trends should leadership focus on to improve margins?
-
----
-
-## **Tools & Skills Used**
-
-* **Tableau** – dashboard design, KPI tiles, mapping, filters
-* **Excel / CSV** – data prep
-* **Data Visualization** – bar charts, heatmaps, category analysis
-* **Analytical Thinking** – identifying profit drivers and discount effects
+- **Sales by Category & Sub-Category**
+- **Profit-color-coded bar charts** for quick margin insight
+- **Sales by Location (Map)**
+- **Sales, Profit & Cost by Region**
+- **Sales Over Time (2018–2022)**
+- **Interactive Filters:** Category, Sub-Category, Region
+- **Click-to-filter Interactivity** across all charts
 
 ---
 
-## **Key Insights**
+## 🧠 Key Insights (Based on Dataset)
 
-* **Technology** is the most profitable category.
-* **Office Supplies** shows strong sales but low profit due to aggressive discounting.
-* **Furniture** generates revenue but has inconsistent margins.
-* The **South region** underperforms compared to West and Central.
-* Higher discount rates correlate with lower profitability.
+### **Category Performance**
+- **Technology** generated the **highest total sales**.
+- **Office Supplies** ranked second.
+- **Furniture** had the **lowest category sales** overall.
+
+### **Sub-Category Performance**
+- **Chairs** had the **highest sub-category sales** and were profitable.
+- **Tables** had strong sales but were **unprofitable** (negative profit).
+- **Phones** had slightly lower sales than Chairs/Tables but delivered strong profit.
+- **Binders** were **very profitable** and had the **second-highest sales** among all sub-categories.
+
+### **Regional Performance**
+- **Central region** led the U.S. in both **sales** and **total cost**.
+- **East region** generated the **most profit** and had the second-highest cost.
+- **West region** ranked second in profit with mid-range sales and cost levels.
+- **South region** performed the worst — **lowest sales, lowest cost, and negative profit**.
+
+### **Sales Trend (2018–2022)**
+- Early-year dips followed by **major spikes** (especially in March and September).
+- Sales often **peak in November**, the highest month observed.
+- Year-to-year fluctuation shows:
+  - **2018:** Lower baseline with gradual growth  
+  - **2019:** Sharp mid-year and Q4 spikes  
+  - **2020:** Flatter due to market conditions  
+  - **2021:** Recovery with growing mid-year momentum  
+  - **2022:** Stabilization and return to higher volume  
 
 ---
 
-## **Dashboard Features**
+## 🛠 Tools & Skills Used
 
-* Interactive filters (Category, Region, Segment)
-* KPI summaries for Sales, Profit, Order Count
-* U.S. regional profit heatmap
-* Category and subcategory breakdowns
-* Clean, concise layout for decision-makers
+- Tableau Desktop  
+- Tableau Public  
+- Exploratory Data Analysis (EDA)  
+- Dashboard UX & Design  
+- Interactive Actions & Filters  
+- Data Visualization Best Practices  
 
 ---
 
-## **Repository Structure**
+## 📁 Repository Structure
 
 ```
-/superstore-tableau-dashboard
+
+/tableau-superstore-dashboard
 │
-├── README.md               # Project overview and documentation
-├── dashboard.png           # Screenshot of the Tableau dashboard
-└── data/                   # (Optional) Source data files
+├── /assets
+│   └── screenshots/
+│
+├── /workbooks
+│   └── Superstore_Dashboard.twbx
+│
+└── README.md
+
 ```
 
 ---
 
-## **Future Enhancements**
+## 🔗 Live Dashboard
 
-* Add monthly/quarterly trends
-* Build discount elasticity analysis
-* Add drill-down views
-* Convert analysis into a Tableau Story
+**[View the Tableau Public Dashboard](https://public.tableau.com/views/SuperstoreDashboard-ChanceFry/Dashboard12?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+---
+
+## 🚀 Future Improvements
+
+- Add KPI tiles (Total Sales, Total Profit, YOY Change)
+- Add discount analysis impacting profit
+- Allow drill-down into individual product performance
+- Create Year-over-Year comparison charts or forecast models
