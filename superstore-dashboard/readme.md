@@ -37,15 +37,15 @@ The dashboard includes:
 - **West region** ranked second in profit with mid-range sales and cost levels.
 - **South region** performed the worst — **lowest sales, lowest cost, and negative profit**.
 
-### **Sales Trend (2018–2022)**
-- Early-year dips followed by **major spikes** (especially in March and September).
-- Sales often **peak in November**, the highest month observed.
-- Year-to-year fluctuation shows:
-  - **2018:** Lower baseline with gradual growth  
-  - **2019:** Sharp mid-year and Q4 spikes  
-  - **2020:** Flatter due to market conditions  
-  - **2021:** Recovery with growing mid-year momentum  
-  - **2022:** Stabilization and return to higher volume  
+### Sales Trend (2018–2022)
+
+- **2018:** Slow start with a sharp drop in February, followed by steady growth and major spikes in June, October, and November.
+- **2019:** Similar seasonality to 2018, with large peaks in September and November and a dip in October.
+- **2020:** Highly volatile year with a major spike in March, fluctuating mid-year performance, and a strong finish in December.
+- **2021:** Lower early-year performance with a major dip in April, followed by steady growth and a strong October peak.
+- **2022:** Stabilizing trend with a very large spike in August and strong late-year performance in November and December.
+- Across all years, **March, September, and November** consistently show strong increases in sales.
+
 
 ---
 
