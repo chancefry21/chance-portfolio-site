@@ -1,14 +1,4 @@
 
----
-
-## 3️⃣ `tables.sql` (MySQL schema)
-
-Create `sql-bank-database/tables.sql` with this:
-
-```sql
--- Create database (optional)
--- CREATE DATABASE bank_db;
--- USE bank_db;
 
 -- Drop tables if they exist (for clean rerun)
 SET FOREIGN_KEY_CHECKS = 0;
