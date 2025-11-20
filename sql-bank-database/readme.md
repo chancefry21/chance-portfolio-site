@@ -126,7 +126,7 @@ LIMIT 10;
 
 ## **Presentation**
 
-▶️ **[View Project Slide Deck](SkyHawk%20Bank%20Database%20SQL.pptx)**
+▶️ **[View Project Slide Deck](SkyHawk Bank Database SQL.pdf)**
 
 ---
 
