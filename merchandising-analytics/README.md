@@ -1,99 +1,87 @@
-#  CVS Merchandising Analytics Dashboard (Excel Project)
+# CVS Retail Category Performance Dashboard (Excel Project)
 
-## **Overview**
+## Overview
 
-This project analyzes retail sales data across multiple product categories and regions to identify trends, highlight opportunities, and provide merchandising recommendations.
+This project analyzes retail sales data across multiple product categories and regions to identify trends, highlight opportunities, and provide merchandising recommendations.  
 The dataset includes transactions from **2014–2017**, and the goal was to build a clean, insights-driven **Excel dashboard** using pivot tables, charts, and summary KPIs.
 
 This project demonstrates skills in:
-
-* Data cleaning
-* Pivot tables & pivot charts
-* Dashboard design
-* KPI development
-* Retail/category analysis
-* Insight-driven storytelling
-
----
-
-## ** Key Insights**
-
-### **1. Seasonal Tools is the Top-Performing Category**
-
-* Generated **$741K**, the highest among all categories
-* Indicates strong customer demand for seasonal products
-* Suggests opportunity to expand SKU assortment and optimize in-store placement
-
-### **2. West Region Leads Sales**
-
-* Contributes **32%** of total revenue
-* Central region follows at **29%**, then East (22%) and South (17%)
-* Highlighting where customer demand is densest and where merchandising focus is strongest
-
-### **3. Strong Revenue, Moderate Profit Margin**
-
-* **Revenue:** $2.29M
-* **Profit:** $286K
-* **Margin:** **12.47%**
-* A ~12% margin signals room to improve pricing strategy, margin mix, or cost control
-
-### **4. Clear Seasonal Sales Pattern**
-
-* Sales trend upward from early-year months into Q3–Q4
-* Consistent with holiday, weather-related, and back-to-school seasonal cycles
-* Suggests predictable demand patterns for planning and replenishment
+- Data cleaning
+- PivotTables & PivotCharts
+- Dashboard design
+- KPI development
+- Retail / category analysis
+- Insight-driven storytelling
 
 ---
 
-## ** Dashboard Preview**
+## Key Insights
 
-`![Dashboard Preview](dashboard_preview.png)`
+### 1. Seasonal Tools is the Top-Performing Category
+- Generated **$741,000**, the highest among all categories.  
+- Indicates strong and sustained customer demand for seasonal products.  
+- Suggests opportunity to expand SKU assortment and optimize in-store placement for this category.
 
----
+### 2. West Region Drives the Most Sales
+- Accounts for **32%** of total revenue — the largest share among all regions.  
+- Central region follows at **29%**, then East at **22%**, and South at **17%**.  
+- Highlights where customer demand is densest and where merchandising focus should remain strongest.
 
-## ** Files Included**
+### 3. Revenue is Strong, but Profit Margin Remains Moderate
+- **Total Revenue:** $2.29 M  
+- **Total Profit:** $286 K  
+- **Profit Margin:** **12.47%**  
+- This margin suggests there is room to improve through cost control, pricing strategy, or optimizing the category mix.
 
-* **CVS_Category.xlsx** – full interactive Excel dashboard
-* **dashboard_preview.png** – image preview for quick inspection
-* **README.md** – project overview and insights
-* *(optional)* PDF export of dashboard
-
----
-
-## ** Recommendations**
-
-### **1. Prioritize Seasonal Tools (High Demand Category)**
-
-* Expand SKU assortment
-* Increase replenishment frequency in Q3–Q4
-* Feature prominently in seasonal aisles
-* Shows long-term sustainability (not just a temporary spike)
-
-### **2. Address South Region Underperformance**
-
-* South contributes only 17% of sales
-  Evaluate:
-* Whether product mix fits local preferences
-* Out-of-stock or supply chain bottlenecks
-* Regional promotions or incentives
-  Represents the largest long-term growth opportunity
-
-### **3. Improve Profit Margin**
-
-* Increase visibility of higher-margin products
-* Review vendor contracts for low-margin categories
-* Reduce reliance on markdowns
-* Improve inventory forecasting to avoid overstock & discounting cycles
+### 4. Consistent Seasonal Sales Pattern Over Time
+- Monthly sales rise steadily from early-year months into Q3–Q4 each year.  
+- Consistent pattern aligns with seasonal trends such as holidays, weather changes, and back-to-school cycles.  
+- This makes demand predictable — useful for inventory planning, promotions, and merchandising cycle planning.
 
 ---
 
-## ** Tools & Skills Used**
+## Dashboard Preview
 
-* Microsoft Excel
-* PivotTables & PivotCharts
-* Slicers (Category, Region, Timeline)
-* Data cleaning (date normalization, category grouping)
-* KPI formatting
-* Retail analytics & merchandising logic
+![Dashboard Preview](dashboard_preview.png)
 
+---
+
+## Files Included
+
+- **CVS_Category.xlsx** – Full interactive Excel dashboard (pivot tables, slicers, charts)  
+- **dashboard_preview.png** – Preview image of the dashboard for quick inspection  
+- **README.md** – This documentation  
+
+---
+
+## Recommendations
+
+### 1. Leverage and Expand Seasonal Tools (High-Demand Category)
+- Increase SKU assortment and shelf space for Seasonal Tools.  
+- Feature the category more prominently during Q3–Q4 via seasonal aisles or endcaps.  
+- Increase replenishment frequency during peak demand periods to avoid stockouts.  
+- Prioritize this category long-term — data shows sustained demand, not a temporary spike.
+
+### 2. Address Underperformance in the South Region
+- South region contributes only **17%** of sales — represents the greatest long-term opportunity for growth.  
+- Evaluate whether the current product mix fits local preferences and demographics.  
+- Investigate potential supply-chain issues or frequent out-of-stock occurrences.  
+- Consider region-specific promotions or merchandising strategies to increase penetration.
+
+### 3. Improve Overall Profit Margin
+- Increase prominence of higher-margin items in merchandising and promotional strategy.  
+- Reassess vendor contracts for low-margin categories to improve cost structure.  
+- Reduce reliance on markdowns by optimizing inventory forecasting and minimizing overstock.  
+- Focus on a balanced category mix — mix high-margin with high-velocity items for better profitability.
+
+---
+
+## Tools & Skills Demonstrated
+
+- Microsoft Excel  
+- PivotTables & PivotCharts  
+- Slicers (Category, Region, Timeline)  
+- Data cleaning and normalization (dates, category grouping)  
+- KPI calculation and formatting  
+- Retail analytics methodology and merchandising logic  
 
