@@ -19,7 +19,7 @@ This project demonstrates skills in:
 
 ### 1. Publication is the Top-Performing Category
 - Generated **$836K**, the highest among all categories.  
-- Indicates strong and sustained customer demand for seasonal products.  
+- Indicates strong and sustained customer demand for publication products.  
 - Suggests opportunity to expand SKU assortment and optimize in-store placement for this category.
 
 ### 2. West Region Drives the Most Sales
