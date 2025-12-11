@@ -1,4 +1,4 @@
-# CVS Retail Category Performance Dashboard (Excel Project)
+# Retail Category Performance Dashboard (Excel Project)
 
 ## Overview
 
@@ -10,8 +10,6 @@ This project demonstrates skills in:
 - PivotTables & PivotCharts
 - Dashboard design
 - KPI development
-- Retail / category analysis
-- Insight-driven storytelling
 
 ---
 
@@ -20,7 +18,7 @@ This project demonstrates skills in:
 ### 1. Publication is the Top-Performing Category
 - Generated **$836K**, the highest among all categories.  
 - Indicates strong and sustained customer demand for publication products.  
-- Suggests opportunity to expand SKU assortment and optimize in-store placement for this category.
+- Suggests opportunity to expand product assortment and optimize in-store assortment for this category.
 
 ### 2. West Region Drives the Most Sales
 - Accounts for **32%** of total revenue — the largest share among all regions.  
@@ -31,7 +29,7 @@ This project demonstrates skills in:
 - **Total Revenue:** $2.29 M  
 - **Total Profit:** $286 K  
 - **Profit Margin:** **12.47%**  
-- This margin suggests there is room to improve through cost control, pricing strategy, or optimizing the category mix.
+- This margin suggests there is room to improve through cost control, pricing strategy, or optimizing category assortment.
 
 ### 4. Consistent Seasonal Sales Pattern Over Time
 - Monthly sales rise steadily from early-year months into Q3–Q4 each year.  
@@ -69,10 +67,8 @@ This project demonstrates skills in:
 - Consider region-specific promotions or merchandising strategies to increase penetration.
 
 ### 3. Improve Overall Profit Margin
-- Increase prominence of higher-margin items in merchandising and promotional strategy.  
-- Reassess vendor contracts for low-margin categories to improve cost structure.  
+- Increase visibility of higher-margin items in promotional strategy.   
 - Reduce reliance on markdowns by optimizing inventory forecasting and minimizing overstock.  
-- Focus on a balanced category mix — mix high-margin with high-velocity items for better profitability.
 
 ---
 
@@ -83,5 +79,4 @@ This project demonstrates skills in:
 - Slicers (Category, Region, Timeline)  
 - Data cleaning and normalization (dates, category grouping)  
 - KPI calculation and formatting  
-- Retail analytics methodology and merchandising logic  
 
