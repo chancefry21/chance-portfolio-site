@@ -55,10 +55,10 @@ This project demonstrates skills in:
 ## Recommendations
 
 ### 1. Leverage and Expand Seasonal Tools (High-Demand Category)
-- Increase SKU assortment and shelf space for Seasonal Tools.  
-- Feature the category more prominently during Q3–Q4 via seasonal aisles or endcaps.  
+- Increase SKU assortment and shelf space for Publications.  
+- Feature the category more prominently during Q3–Q4 via seasonal aisles 
 - Increase replenishment frequency during peak demand periods to avoid stockouts.  
-- Prioritize this category long-term — data shows sustained demand, not a temporary spike.
+
 
 ### 2. Address Underperformance in the South Region
 - South region contributes only **17%** of sales — represents the greatest long-term opportunity for growth.  
